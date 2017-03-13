@@ -5,9 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DesktopSearch"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="300px"/>
-
+        Title="Desktop search" Height="350" Width="525"
+        SizeToContent="WidthAndHeight">
+    <Grid Name="SearchPanel">
+        <Grid.RowDefinitions>
+            <RowDefinition x:Name="inputRow"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" MinWidth="300px"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+        <TextBox x:Name="textBox" Grid.Row="0" FontSize="24" Padding="0,0,5,0"  Margin="10,5,10,10" TextWrapping="Wrap" TextAlignment="Right" Text="Поиск" HorizontalAlignment="Stretch" />
+        <ListView Grid.Row="1"></ListView>
     </Grid>
 </Window>
