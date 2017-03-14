@@ -6,10 +6,26 @@ using System.Threading.Tasks;
 
 namespace DesktopSearch.Model
 {
-    public class Command
+    abstract class Command
     {
         private string name;
 
         public string Name { get; set; }
+
+        public abstract void Execute();
     }
+
+    class Map : Command
+    {
+        private string locality;
+
+        public string Locality { get; set; }
+
+        public override void Execute()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+
 }
