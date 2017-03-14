@@ -9,7 +9,6 @@ namespace DesktopSearch.Model
     abstract class Command
     {
         private string name;
-
         public string Name { get; set; }
 
         public abstract void Execute();

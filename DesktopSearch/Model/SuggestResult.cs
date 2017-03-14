@@ -11,7 +11,7 @@ namespace DesktopSearch.Model
     public class SuggestResult : INotifyPropertyChanged
     {
         private string content;
-        private Command command;
+        
 
         public event PropertyChangedEventHandler PropertyChanged;
     }
