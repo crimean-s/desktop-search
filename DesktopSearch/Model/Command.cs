@@ -18,7 +18,18 @@ namespace DesktopSearch.Model
     class Map : Command
     {
         private string locality;
+        public string Locality { get; set; }
 
+        public override void Execute()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+
+    class Weather : Command
+    {
+        private string locality;
         public string Locality { get; set; }
 
         public override void Execute()
